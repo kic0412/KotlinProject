@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "717418070210",
+    "project_id": "stepgameproject-1da3c",
+    "storage_bucket": "stepgameproject-1da3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717418070210:android:ee0314ed14177451fafb5b",
+        "android_client_info": {
+          "package_name": "kr.co.kkm.stepgameproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717418070210-h7u82irf9vq3h3iep9akl2oubnjnpdnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHhRO6dICc0nMElwUHlRetbq9q6LriJUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717418070210-h7u82irf9vq3h3iep9akl2oubnjnpdnu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
