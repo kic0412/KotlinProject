@@ -1,22 +1,63 @@
 package kr.co.kkm.stepgameproject
 
 import android.content.ContentValues.TAG
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class SignUpActivity : AppCompatActivity() {
+
+    //private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sign_up)
 
-        val sign_btn = findViewById<Button>(R.id.signUpButton)
+        // Initialize Firebase Auth
+        //auth = Firebase.auth
+        signUp()
+    }
 
-        sign_btn.setOnClickListener {
-            Log.e(TAG, "회원가입 버튼 클릭")
-            Toast.makeText(this, "회원가입 성공", Toast.LENGTH_SHORT).show()
+    private fun signUp() {
+        val upBtn = findViewById<Button>(R.id.signUpButton)
+
+        upBtn.setOnClickListener {
+            Toast.makeText(this, "회원 가입 성공", Toast.LENGTH_SHORT).show()
+            val mPage = Intent(this, MainActivity::class.java)
+            startActivity(mPage)
         }
     }
+
+    /*public override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+        }
+    }
+
+    public fun signUp() {
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+                    Log.d(TAG, "createUserWithEmail:success")
+                    val user = auth.currentUser
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
+                    Toast.makeText(
+                        baseContext,
+                        "Authentication failed.",
+                        Toast.LENGTH_SHORT,
+                    ).show()
+                }
+            }
+    }*/
 }

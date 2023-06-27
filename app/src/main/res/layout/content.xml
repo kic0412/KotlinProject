@@ -10,19 +10,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.google.android.gms.maps.MapView
-            android:id="@+id/contentMap"
-            android:layout_width="400dp"
-            android:layout_height="400dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp" />
-
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/contentAd"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="50dp" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -40,12 +27,22 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/contentResultButton"
+                android:id="@+id/contentRecodeButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="#4CAF50"
                 android:text="내 기록"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/contentProfileButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#4CAF50"
+                android:text="설정"
                 android:textSize="28dp"
                 android:textStyle="bold" />
         </LinearLayout>
