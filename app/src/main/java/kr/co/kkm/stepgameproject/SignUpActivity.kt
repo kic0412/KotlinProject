@@ -72,7 +72,7 @@ class SignUpActivity : AppCompatActivity() {
                 }
             }
     }
-ㄷ
+
     private fun saveAdditionalUserInfo(userId: String?, name: String, nickname: String) {
         userId?.let { // userId를 nullable로 해줬기 때문에 ?.를 사용
             val userRef = FirebaseDatabase.getInstance().reference.child("users").child(it)
