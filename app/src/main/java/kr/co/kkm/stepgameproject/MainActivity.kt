@@ -13,12 +13,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main)
 
-
-
-        val database = Firebase.database
-        val myRef = database.getReference("bbs")
-        myRef.child("age").setValue(19)
-        myRef.child("name").setValue("scott")
         logIn()
         signUp()
     }
@@ -27,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         val logBtn = findViewById<Button>(R.id.mainLogInButton)
 
         logBtn.setOnClickListener {
-            Toast.makeText(this, "로그인 페이지로", Toast.LENGTH_SHORT).show()
             val lPage = Intent(this, LogInActivity::class.java)
             startActivity(lPage)
         }
@@ -37,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         val signBtn = findViewById<Button>(R.id.mainSignUpButton)
 
         signBtn.setOnClickListener {
-            Toast.makeText(this, "회원 가입 페이지로", Toast.LENGTH_SHORT).show()
             val sPage = Intent(this, SignUpActivity::class.java)
             startActivity(sPage)
         }
