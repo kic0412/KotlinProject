@@ -18,7 +18,6 @@ class ProfileActivity : AppCompatActivity() {
         val conBtn = findViewById<Button>(R.id.profilButton)
 
         conBtn.setOnClickListener {
-            Toast.makeText(this, "수정 완료", Toast.LENGTH_SHORT).show()
             val cPage = Intent(this, ContentActivity::class.java)
             startActivity(cPage)
         }

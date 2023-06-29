@@ -18,7 +18,6 @@ class LogInActivity : AppCompatActivity() {
         val inBtn = findViewById<Button>(R.id.logInButton)
 
         inBtn.setOnClickListener {
-            Toast.makeText(this, "로그인 완료", Toast.LENGTH_SHORT).show()
             val cPage = Intent(this, ContentActivity::class.java)
             startActivity(cPage)
         }
