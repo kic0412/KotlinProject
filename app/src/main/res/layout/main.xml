@@ -5,72 +5,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/mainTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="어플 이름"
-        android:textColor="#000000"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.060000002" />
-
-    <ImageView
-        android:id="@+id/mainLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="250dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25"
-        app:srcCompat="@drawable/logo" />
-
     <Button
         android:id="@+id/mainLogInButton"
         android:layout_width="250dp"
         android:layout_height="60dp"
-        android:backgroundTint="#4CAF50"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#9dd84b"
+        android:fontFamily="@font/nanumsquareb"
         android:text="로그인"
         android:textColor="#FFFFFF"
-        android:textSize="28sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainLogo"
-        app:layout_constraintVertical_bias="0.13999999" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.14" />
 
     <Button
         android:id="@+id/mainSignUpButton"
         android:layout_width="250dp"
         android:layout_height="60dp"
-        android:layout_marginTop="18dp"
-        android:backgroundTint="#4CAF50"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#9dd84b"
+        android:fontFamily="@font/nanumsquareb"
         android:text="회원가입"
-        android:textSize="28sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainLogInButton" />
 
-    <Button
-        android:id="@+id/mainCreditButton"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="18dp"
-        android:backgroundTint="#4CAF50"
-        android:text="도움말"
-        android:textSize="28sp"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="233dp"
+        android:layout_height="302dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="54dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainSignUpButton" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/run" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
