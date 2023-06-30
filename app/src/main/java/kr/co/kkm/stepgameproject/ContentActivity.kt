@@ -19,8 +19,7 @@ class ContentActivity : AppCompatActivity() {
         val recBtn = findViewById<Button>(R.id.contentRecodeButton)
 
         recBtn.setOnClickListener {
-            Toast.makeText(this, "내 기록으로", Toast.LENGTH_SHORT).show()
-            val rPage = Intent(this, RecordActivity::class.java)
+            val rPage = Intent(this, MapsActivity::class.java)
             startActivity(rPage)
         }
     }
@@ -29,7 +28,6 @@ class ContentActivity : AppCompatActivity() {
         val proBtn = findViewById<Button>(R.id.contentProfileButton)
 
         proBtn.setOnClickListener {
-            Toast.makeText(this, "프로필 설정으로", Toast.LENGTH_SHORT).show()
             val pPage = Intent(this, ProfileActivity::class.java)
             startActivity(pPage)
         }

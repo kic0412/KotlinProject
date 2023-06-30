@@ -7,20 +7,20 @@
 
     <ImageView
         android:id="@+id/logInLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="250dp"
+        android:layout_width="81dp"
+        android:layout_height="96dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.25"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/login" />
 
     <EditText
         android:id="@+id/logInEmailText"
         android:layout_width="310dp"
         android:layout_height="50dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="150dp"
         android:ems="10"
         android:hint="이메일"
         android:inputType="textEmailAddress"
@@ -44,11 +44,12 @@
 
     <Button
         android:id="@+id/logInButton"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:backgroundTint="#4CAF50"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#9dd84b"
+        android:fontFamily="@font/nanumsquareb"
         android:text="로그인"
-        android:textSize="28sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

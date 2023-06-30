@@ -5,47 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="412dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/contentRecodeButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="40dp"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:backgroundTint="#9dd84b"
+            android:text="랭킹" />
 
-            <Button
-                android:id="@+id/contentRankButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="#4CAF50"
-                android:text="랭킹"
-                android:textSize="28dp"
-                android:textStyle="bold" />
+        <Button
+            android:id="@+id/contentProfileButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#9dd84b"
+            android:text="내정보" />
 
-            <Button
-                android:id="@+id/contentRecodeButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="#4CAF50"
-                android:text="내 기록"
-                android:textSize="28dp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/contentProfileButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="#4CAF50"
-                android:text="설정"
-                android:textSize="28dp"
-                android:textStyle="bold" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#9dd84b"
+            android:layout_weight="1"
+            android:text="Button" />
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
