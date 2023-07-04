@@ -42,5 +42,4 @@ class ContentActivity : AppCompatActivity() {
             startActivity(sPage)
         }
     }
-
 }

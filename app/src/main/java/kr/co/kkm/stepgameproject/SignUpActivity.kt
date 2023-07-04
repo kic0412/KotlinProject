@@ -4,6 +4,7 @@ import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.system.StructMsghdr
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
@@ -24,7 +25,6 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sign_up)
 
-        // Initialize Firebase Auth
         auth = Firebase.auth
 
         button()
@@ -46,31 +46,44 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
+    private fun startToast(msg:String) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT,).show()
+    }
+
     private fun signUp() {
 
-        val email=findViewById<TextView>(R.id.editEmailText).text.toString()
-        val password=findViewById<TextView>(R.id.editEmailText).text.toString()
+        val email = findViewById<TextView>(R.id.editEmailText).text.toString()
+        val password = findViewById<TextView>(R.id.editPasswordText).text.toString()
+        val passwordCheck = findViewById<TextView>(R.id.editPasswordCheck).text.toString()
         val nickname=findViewById<TextView>(R.id.editNickText).text.toString()
         val name=findViewById<TextView>(R.id.editNameText).text.toString()
 
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    // 회원가입 성공시
-                    Log.d(TAG, "createUserWithEmail:success")
-                    val user = auth.currentUser
-                    if (user != null) {
-                        val uid = user.uid
-                        saveAdditionalUserInfo(uid, name, nickname)
+        if (email.isNotEmpty() && password.isNotEmpty() && passwordCheck.isNotEmpty()) {
+            if (password == passwordCheck) {
+                auth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            // 회원가입 성공시
+                            val user = auth.currentUser
+                            if (user != null) {
+                                val uid = user.uid
+                                saveAdditionalUserInfo(uid, name, nickname)
+                            }
+                            startToast("회원가입 성공!")
+                            val mPage = Intent(this, MainActivity::class.java)
+                            startActivity(mPage)
+                        } else {
+                            // 회원가입 실패시
+                            Log.w(TAG, "createUserWithEmail:failure", task.exception)
+                            startToast(task.exception.toString())
+                        }
                     }
-                    val mPage = Intent(this, MainActivity::class.java)
-                    startActivity(mPage)
-                } else {
-                    // 회원가입 실패시
-                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                    Toast.makeText(baseContext, "회원 가입 실패", Toast.LENGTH_SHORT,).show()
-                }
+            } else {
+                startToast("비밀번호가 일치하지 않습니다.")
             }
+        } else {
+            startToast("이메일 또는 비밀번호를 입력해주세요.")
+        }
     }
 
     private fun saveAdditionalUserInfo(userId: String?, name: String, nickname: String) {
