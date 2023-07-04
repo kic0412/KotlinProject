@@ -13,12 +13,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main)
 
-
-
-        val database = Firebase.database
-        val myRef = database.getReference("bbs")
-        myRef.child("age").setValue(19)
-        myRef.child("name").setValue("scott")
         logIn()
         signUp()
     }

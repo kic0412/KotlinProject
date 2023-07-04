@@ -7,98 +7,87 @@
     tools:context=".SplashActivity">
 
 
-    <TextView
-        android:id="@+id/signUpTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="177dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="176dp"
-        android:text="회원가입"
-        android:fontFamily="@font/nanumsquareb"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/editEmailText"
-        android:layout_width="240dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="95dp"
-        android:ems="10"
-        android:fontFamily="@font/nanumsquareb"
-        android:hint="이메일"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpTitle" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editPasswordText"
-        android:layout_width="240dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:hint="비밀번호"
-        android:fontFamily="@font/nanumsquareb"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editEmailText" />
+            <TextView
+                android:id="@+id/signUpTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="50dp"
+                android:fontFamily="@font/nanumsquareb"
+                android:text="회원가입"
+                android:textSize="30sp" />
 
-    <EditText
-        android:id="@+id/editPasswordCheck"
-        android:layout_width="240dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:hint="비밀번호 확인"
-        android:fontFamily="@font/nanumsquareb"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPasswordText" />
+            <EditText
+                android:id="@+id/editNameText"
+                android:layout_width="240dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:ems="10"
+                android:fontFamily="@font/nanumsquareb"
+                android:hint="이름"
+                android:inputType="text" />
 
-    <EditText
-        android:id="@+id/editNameText"
-        android:layout_width="240dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:hint="이름"
-        android:fontFamily="@font/nanumsquareb"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPasswordCheck" />
+            <EditText
+                android:id="@+id/editNickText"
+                android:layout_width="240dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:ems="10"
+                android:fontFamily="@font/nanumsquareb"
+                android:hint="닉네임"
+                android:inputType="text" />
 
-    <EditText
-        android:id="@+id/editNickText"
-        android:layout_width="240dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:hint="닉네임"
-        android:fontFamily="@font/nanumsquareb"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editNameText" />
+            <EditText
+                android:id="@+id/editEmailText"
+                android:layout_width="240dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:ems="10"
+                android:fontFamily="@font/nanumsquareb"
+                android:hint="이메일"
+                android:inputType="textEmailAddress" />
 
-    <Button
-        android:id="@+id/signUpButton"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginBottom="48dp"
-        android:text="가입하기"
-        android:fontFamily="@font/nanumsquareb"
-        android:backgroundTint="#9dd84b"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editNickText" />
+            <EditText
+                android:id="@+id/editPasswordText"
+                android:layout_width="240dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:ems="10"
+                android:fontFamily="@font/nanumsquareb"
+                android:hint="비밀번호"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/editPasswordCheck"
+                android:layout_width="240dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:ems="10"
+                android:fontFamily="@font/nanumsquareb"
+                android:hint="비밀번호 확인"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/signUpButton"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="46dp"
+                android:layout_marginBottom="48dp"
+                android:backgroundTint="#9dd84b"
+                android:fontFamily="@font/nanumsquareb"
+                android:text="가입하기"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
