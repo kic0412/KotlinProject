@@ -18,27 +18,27 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/contentRecodeButton"
+            android:id="@+id/contentMapBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="#9dd84b"
-            android:text="랭킹" />
+            android:text="지도" />
 
         <Button
-            android:id="@+id/contentProfileButton"
+            android:id="@+id/contentRecodeBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="#9dd84b"
-            android:text="내정보" />
+            android:text="기록" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/contentSettingBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:backgroundTint="#9dd84b"
             android:layout_weight="1"
-            android:text="Button" />
+            android:backgroundTint="#9dd84b"
+            android:text="설정" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
